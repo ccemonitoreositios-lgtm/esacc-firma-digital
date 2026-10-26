@@ -1,0 +1,9 @@
+<jboss-deployment-structure>
+    <deployment>
+
+        <exclusions>
+            <module name="org.bouncycastle"/>
+        </exclusions>
+
+    </deployment>
+</jboss-deployment-structure>

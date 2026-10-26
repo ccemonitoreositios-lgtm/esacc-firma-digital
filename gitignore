@@ -1,0 +1,23 @@
+# Compiled Files
+*.class
+bin/
+build/
+/target/
+java/build/**
+
+# Eclipse
+.classpath
+.project
+.settings/
+
+# Intellij
+.idea/
+*.iml
+*.iws
+
+
+# Mac
+.DS_Store
+
+#Entidades referenciadas
+**/resources/ec/**

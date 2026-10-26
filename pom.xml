@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ec.gob.cce</groupId>
+	<artifactId>esacc-firmadigital</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>esacc-firmadigital</name>
+
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>17</java.version>
+		<maven.compiler.plugin.version>3.1</maven.compiler.plugin.version>
+		<tika.version>1.22</tika.version>
+		 <poi.version>5.2.0</poi.version>
+		 <itext.version>8.0.5</itext.version>
+		  <firma.version>5.1.0-SNAPSHOT</firma.version>
+	</properties>
+
+
+	<modules>
+		<module>esacc-firmadigital-dto</module>
+		<module>esacc-firmadigital-ejb</module>
+		<module>esacc-firmadigital-utilidad</module>
+		<module>esacc-firmadigital-excepciones</module>
+		<module>esacc-firmadigital-servicio-api</module>
+	</modules>
+
+<dependencyManagement>
+    <dependencies>
+
+        <dependency>
+            <groupId>org.apache.tika</groupId>
+            <artifactId>tika-core</artifactId>
+            <version>${tika.version}</version>
+        </dependency>
+        
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>${poi.version}</version>
+        </dependency>
+
+        <!-- 🔥 iText SIN BOM -->
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>kernel</artifactId>
+            <version>${itext.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.itextpdf</groupId>
+            <artifactId>forms</artifactId>
+            <version>${itext.version}</version>
+        </dependency>
+        
+         <dependency>
+            <groupId>ec.gob.firmadigital</groupId>
+            <artifactId>libreria</artifactId>
+            <version>${firma.version}</version>
+        </dependency>
+
+    </dependencies>
+</dependencyManagement>
+
+</project>

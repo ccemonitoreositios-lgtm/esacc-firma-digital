@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		    <groupId>ec.gob.cce</groupId>
+		    <artifactId>esacc-firmadigital</artifactId>
+		    <version>0.0.1-SNAPSHOT</version>
+		    <relativePath>../pom.xml</relativePath> <!-- 🔥 ESTA LÍNEA -->
+     </parent>
+	<artifactId>esacc-firmadigital-ejb</artifactId>
+	<packaging>ejb</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.version>17</java.version>
+		<maven.compiler.source>17</maven.compiler.source>
+		<maven.compiler.target>17</maven.compiler.target>
+	</properties>
+
+	<build>
+		<finalName>esacc-firmadigital-ejb</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+			</plugin>
+			<plugin>
+				<artifactId>maven-ejb-plugin</artifactId>
+				<version>3.0.1</version>
+				<configuration>
+					<ejbVersion>3.2</ejbVersion>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>jakarta.platform</groupId>
+			<artifactId>jakarta.jakartaee-web-api</artifactId>
+			<version>10.0.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<!--  dto's' -->
+		<dependency>
+			<groupId>ec.gob.cce</groupId>
+			<artifactId>esacc-firmadigital-dto</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	
+		<!--  excepciones -->
+		<dependency>
+			<groupId>ec.gob.cce</groupId>
+			<artifactId>esacc-firmadigital-excepciones</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!--  utilidaddes -->
+		<dependency>
+			<groupId>ec.gob.cce</groupId>
+			<artifactId>esacc-firmadigital-utilidad</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		
+	   <dependency>		
+			 <groupId>ec.gob.firmadigital</groupId>
+			 <artifactId>libreria</artifactId>		
+			  <version>5.1.0-SNAPSHOT</version>	
+		</dependency>	
+		
+  <dependency>
+    <groupId>com.itextpdf</groupId>
+    <artifactId>kernel</artifactId>
+</dependency>
+
+<dependency>
+    <groupId>com.itextpdf</groupId>
+    <artifactId>forms</artifactId>
+</dependency>
+		 
+	</dependencies>
+
+</project>

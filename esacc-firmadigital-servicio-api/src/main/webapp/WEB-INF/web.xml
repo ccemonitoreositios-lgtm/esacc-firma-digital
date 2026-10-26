@@ -1,0 +1,32 @@
+<!-- WEB-INF/web.xml -->
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+                             http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+<!-- 
+  <login-config>
+    <auth-method>OIDC</auth-method>              
+    <realm-name>cce</realm-name>                 
+  </login-config>
+
+
+  <security-constraint>
+    <web-resource-collection>
+      <web-resource-name>API-protegida</web-resource-name>
+      <url-pattern>/rest/api/firmaDigitalSaccInterno/*</url-pattern>    
+    
+    </web-resource-collection>
+    <auth-constraint>
+    
+      <role-name>*</role-name>
+    </auth-constraint>
+  </security-constraint>
+
+  
+  <security-role>
+    <role-name>*</role-name>
+  </security-role>
+ -->
+</web-app>
